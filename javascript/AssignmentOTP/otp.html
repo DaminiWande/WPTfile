@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP|GENERATOR</title>
+
+</head>
+<body>
+    <div class="container">
+        <h3>OTP GENERATOR</h3>
+        <div>
+            <label>
+                <input type="radio" name="otplength" value="6">6-Digit OTP
+                <input type="radio" name="otplength" value="4">4-Digit OTP
+            </label>
+        </div>
+        <button class="generate-btn" onclick="generateOTP()">Generate OTP</button>
+
+        <button class="reset-btn" onclick="resetOTP()">Reset OTP</button>
+        <div class="otp-display" id="otpDisplay"></div>
+    </div>
+    <script>
+        function generateOTP() {
+     
+            const otpLength = document.querySelector('input[name="otplength"]:checked').value;
+            let otp = '';
+
+            for (let i = 0; i < otpLength; i++) {
+                otp += Math.floor(Math.random() * 10); 
+            }
+
+            document.getElementById('otpDisplay').textContent = `Your OTP is: ${otp}`;
+        }
+
+        function resetOTP() {
+            document.getElementById('otpDisplay').textContent = '';
+            document.querySelector('input[name="otplength"][value="6"]').checked = true;
+        }
+    </script>
+</body>
+</html>

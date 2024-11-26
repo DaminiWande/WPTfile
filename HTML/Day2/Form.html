@@ -1,0 +1,81 @@
+<form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" value="Damini" pattern="[A-za-z ]{3,200}"  name="name"><!-- name is attribute here and id is identity-->
+    <br>
+    <label for="age">Age:</label>
+    <input type="number" pattern="[0-9]{1,3}" min="1" max="150" id="name" name="age">
+    <br>
+    <label for="email">Email:</label>
+    <input type="email" size="70" required placeholder="abc@gmail.com " id="email" name="email">
+    <br>
+    <label for="datetime">Date-Time:</label>
+    <input type="datetime-local" required id="datetime" name="datetime">
+    <br>
+    <label for="date">Date:</label>
+    <input type="date" required id="date" name="date">
+    <br>
+    <br>
+    <label for="week">Week:</label>
+    <input type="week" required id="week" name="week">
+    <br>
+    <br>
+    <label for="month">Date:</label>
+    <input type="month" required id="month" name="month">
+    <br>
+    <label for="password">Password:</label>
+    <input type="password" required id="password" name="password">
+    <br>
+    <!-- Dropdown-->
+    <label for="city">City:</label>
+    <select name="city" id="city" required>
+        <option value="">Select</option>
+        <option value="ngp">Nagpur</option>
+        <option value="chd">Chandrapur</option>
+        <option value="Gd">Gadchiroli</option>
+        <option value="Akl">Akola</option>
+    </select>
+    <br>
+    <!-- List-->
+    <label for="city">City:</label>
+    <select name="city" id="city" required multiple>
+        <option value="">Select</option>
+        <option value="ngp">Nagpur</option>
+        <option value="chd">Chandrapur</option>
+        <option value="Gd">Gadchiroli</option>
+        <option value="Akl">Akola</option>
+    </select>
+    <br>
+    <label for="address">Address:</label>
+    <textarea required id="address" name="address" rows="5"  cols="50">
+        Mahalgaon Nagpur
+    </textarea>
+    <br>
+    <label for="gender">Gender:</label><!-- select one type at a time-->
+    <label for="male">Male</label>
+    <input type="radio" value="male" name="gender" checked>
+    <label for="female">Female</label>
+    <input type="radio" value="female" name="gender">
+    <label for="other">Other</label>
+    <input type="radio" value="other" name="gender">
+    <br>
+    <!-- Checkbox-->
+     <label for="hobbies">Hobbies:</label>
+     <br>
+     <label for="hobbies">Select Hobby:</label>
+     <label for="hobbies">painting:</label>
+     <input type="checkbox" value="painting" name="hobbies">
+     <label for="hobbies">swimming:</label>
+     <input type="checkbox" value="swimming" name="Hobbies">
+     <label for="hobbies">running:</label>
+     <input type="checkbox" value="running" name="Hobbies" >
+     <label for="hobbies">dancing:</label>
+     <input type="checkbox" value="dancing" name="Hobbies">
+     <br>
+
+     <label for="color">Fav Color:</label>
+     <input type="color" name="color" id="color">
+     <br>
+     
+     <input type="image" src="Naruto.webp.jpg">
+    <input type="submit" value="Register">
+</form>

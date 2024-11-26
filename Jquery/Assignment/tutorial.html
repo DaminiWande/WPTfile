@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tutorials</title>
+</head>
+<body>
+    <header>
+        <h1>Tutorial Website</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tutorial.html">Tutorials</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Tutorials</h2>
+        <h3>HTML Basics</h3>
+        <p>Learn the basics of HTML, the standard markup language for creating web pages.</p>
+        
+        <h3>CSS Fundamentals</h3>
+        <p>Discover how to style your web pages with CSS.</p>
+        
+        <h3>JavaScript Introduction</h3>
+        <p>Get started with JavaScript, the programming language of the web.</p>
+        
+        <h3>Interactive Tutorial</h3>
+        <p>Try the following interactive tutorial:</p>
+        <button id="startTutorial">Start Tutorial</button>
+        <div id="tutorialContent" class="hidden">
+            <p>Welcome to the interactive tutorial!</p>
+            <p>Here you will learn how to build a simple webpage.</p>
+            <button id="endTutorial">End Tutorial</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tutorial Website</p>
+    </footer>
+
+    <script>
+        document.getElementById('startTutorial').onclick = function() {
+            document.getElementById('tutorialContent').classList.remove('hidden');
+        };
+
+        document.getElementById('endTutorial').onclick = function() {
+            document.getElementById('tutorialContent').classList.add('hidden');
+        };
+    </script>
+</body>
+</html>

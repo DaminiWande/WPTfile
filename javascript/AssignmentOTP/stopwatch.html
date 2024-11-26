@@ -1,0 +1,86 @@
+<div id="watch">
+    <span id="h">00:</span>
+    <span id="m">00:</span>
+    <span id="s">00:</span>
+    <span id="ms">00</span>
+</div>
+<button onclick="start()">Start</button>
+<button onclick="stop()">Stop</button>
+<button onclick="clearWatch()">Reset</button>
+<script>
+    const h=document.getElementById("h");
+    const m=document.getElementById("m");
+    const s=document.getElementById("s");
+    const ms=document.getElementById("ms");
+let seconds=0
+let milliSeconds=0
+let minutes=0
+let hours=0
+let intervalID=null
+let flag=false
+
+function stop()
+{
+    clearInterval(intervalID)
+    flag=false
+}
+function clearWatch(){
+  
+  stop()
+  seconds=0
+  milliSeconds=0
+  minutes=0
+  hours=0
+  ms.innerText="00"
+  h.innerText="00"
+  m.innerText="00"
+  s.innerText="00"
+  flag=false
+}
+function start()
+{
+    if(!flag)
+{
+    flag=true
+ intervalID = setInterval(function(){
+    incSeconds(++milliSeconds)
+    incMinutes(seconds)
+    incHours(minutes)
+    setMilli(milliSeconds)
+ },1)
+}
+}
+ function setMilli(milliSeconds){
+    ms.innerText=milliSeconds
+ }
+
+function incSeconds(milli)
+{
+    if(milli==999)
+{
+    milliSeconds=0
+    seconds++
+    s.innerText=seconds
+}
+}
+function incMinutes(sec)
+{
+ if(sec==59)
+ {
+    seconds=0
+    minutes++
+    m.innerText=minutes
+ }
+}
+function incHours(min)
+{
+    
+ if(min==59){
+    minutes=0
+    hours++
+    h.innerText=hours
+ }
+}
+</script>
+
+

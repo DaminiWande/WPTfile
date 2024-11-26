@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wikipedia Style</title>
+    <style>
+        /* styles.css */
+
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set font and background */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #000;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+header .search {
+    display: flex;
+    align-items: center;
+}
+
+header .search input {
+    padding: 5px;
+    font-size: 16px;
+}
+
+header .search button {
+    padding: 5px 10px;
+    background-color: #555;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+header .search button:hover {
+    background-color: #666;
+}
+
+.main-container {
+    display: flex;
+    margin: 20px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+}
+
+.sidebar ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar ul li a:hover {
+    color: #0066cc;
+}
+
+.content {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.content h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #0066cc;
+}
+
+.content p {
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.content h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    color: #333;
+}
+
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Wikipedia</h1>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search Wikipedia...">
+            <button>Search</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <aside class="sidebar">
+            <ul>
+                <li><a href="#">Main Page</a></li>
+                <li><a href="#">Contents</a></li>
+                <li><a href="#">Featured Articles</a></li>
+                <li><a href="#">Current Events</a></li>
+                <li><a href="#">Random Article</a></li>
+            </ul>
+        </aside>
+
+        <main class="content">
+            <article>
+                <h2>Sample Article Title</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit amet augue justo. Nulla facilisi. Sed tristique justo a ante dapibus, ac tincidunt libero fringilla.</p>
+                <p>Suspendisse potenti. Aliquam erat volutpat. In et diam id nunc scelerisque efficitur non eu libero. Aenean a nisl non libero vulputate pharetra non in velit. Phasellus dapibus lorem ac enim sodales pretium.</p>
+                <h3>Subsection Heading</h3>
+                <p>Phasellus vehicula orci ut dui aliquet, a volutpat felis condimentum. Proin fermentum varius augue, non pharetra sapien dignissim in.</p>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Wikipedia Contributors. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <table  heigth="100%" width="100%">
+            <tr>
+                <th>Menu</th>
+                <th>
+                    <img src="wikipedia.jpg" width="150">
+                </th>
+                <th>Search</th>
+                <th>donate</th>
+                <th>Create account</th>
+                <th>Log in</th>
+            </tr>
+            <tr>
+                <th>Contents</th>
+                <th>Hide</th>
+                <th>Article</th>
+                <th>Talk</th>
+                <th>Read</th>
+                <th>View Score</th>
+                <th>View History</th>
+                <th>Tools</th>
+            </tr>
+        </table>
+    
+    </body>    
+</html>

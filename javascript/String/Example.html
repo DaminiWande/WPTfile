@@ -1,0 +1,74 @@
+<script>
+    /*
+    split()
+    concat()
+    indexOf()  char/string
+    lastindexOf()
+    toUpperCase()
+    toLowerCase()
+    endsWith()
+    startsWith()
+    charAt()  get the character at given index
+
+    subString()
+    subStr()
+    slice()
+
+    === or == match string
+    replace()
+    includes()
+
+    match() used for validation used with regular expression
+
+    length(property to get length of string)
+
+    trim()  remove whitespace from both sides of a string
+    trimEnd() remove whitespace from end of a string
+    trimStart() remove whitespace from start of a string
+    */
+
+     let n="hello"
+     console.log(n.charAt(3))
+     console.log(n.charAt(7))
+
+    console.log(n.toLowerCase())
+    console.log(n.toUpperCase())
+
+    console.log(n.length)
+
+    console.log(n.substring(2)) //end index is excluded( not included) included is end-1
+    console.log(n.substring(2,4))
+
+    console.log(n.substr(1,3))   //substr(startIndex,length)
+
+    console.log(n.slice(2))
+    console.log(n.slice(2,4))
+
+    const para="This is a paragraph to search string."
+    console.log(para.endsWith("This is a paragraph to search string."))
+    console.log(para.endsWith(" string."))
+    console.log(para.startsWith("This is a paragraph to search string."))
+    console.log(para.startsWith("This is "))
+    console.log(para.toLowerCase().startsWith("this is ".toLowerCase()))
+
+
+    const listWord=para.split("a")
+    console.log(listWord.length)
+    console.table(listWord)
+
+    console.log(para.includes("to"))
+    console.log(para.includes("To"))
+    console.log(para.indexOf("t"))
+    console.log(para.indexOf("is"))
+    console.log(para.indexOf("is"))
+    
+
+
+
+
+
+
+
+
+
+</script>

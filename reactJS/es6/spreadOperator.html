@@ -1,0 +1,38 @@
+<script>
+    //this is normal method which we used
+//     const arr=[4,24,76,34,83];
+//     const arr1=[23,71];
+//     console.log(arr1)
+//     arr.forEach(function(e)
+// {
+//     arr1.push(e)
+// })
+// console.log(arr1)
+
+//spread Operator method
+const arr=[4,24,76,34,83];
+    const arr1=[23,71,...arr];
+    console.log(arr1)
+
+
+//Rest Operator
+//this is normal method which we used
+// const contact= {mobile:"9022433758",city:"Nagpur"}
+// const person={name:"Damini",age:23}
+
+// for(key of object.keys(contact)){
+//     person[key]=contact[key]
+// }
+// console.log(person)
+//spread operator method
+const contact= {mobile:"9022433758",city:"Nagpur"}
+let person={name:"Damini",age:23,...contact}
+console.log(person)
+//to update 
+person={...person,name:"Sharvari"}
+console.log(person)
+//to delete 
+delete person.age
+console.log(person)
+
+</script>

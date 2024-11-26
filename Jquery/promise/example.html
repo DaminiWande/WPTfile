@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function function1()  //3 second will be required to print this
+    {
+        setTimeout(()=>{
+            console.log("Value=",10)
+        },3000)
+    }
+
+    function function2()  
+    {
+        console.log("finish...")     
+    }
+    function1()
+    function2()  // here function2 will print first and then function1 to handle this problem we used promises which is called inversion
+</script>
+</html>

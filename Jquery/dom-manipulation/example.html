@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        html ka koyi bhi object bana k liye , there are DOM methods in javascript
+        DOM Manipulation document object methods
+        1] createElement()- create tag object  <p></p>
+        2] createTextNode()- create text content or content for tag object  //hello world
+        <p>Hello world</p>
+        append method-> appendChild() and append()
+
+    </pre>
+    <div id="para-box">
+
+    </div>
+    <div id="para1">
+        <ul>
+            <li>One</li>
+            <li>Two</li>
+            <li>Three</li>
+
+        </ul>
+    </div>
+   
+    <script>
+    //     //iske andar hum para ko append karenge
+    //    const div= document.getElementById("para-box")
+
+    //    const pTag=document.createElement("p");  //<p></P>para tag created
+
+    //    const pText=document.createTextNode(" Lorem ipsum dolor sit amet consectetur, adipisicing elit. Atque eum iusto adipisci. Voluptate adipisci quaerat in quibusdam maiores odit totam incidunt quae, mollitia tenetur culpa deserunt! Possimus saepe consequuntur nobis?")
+    //   pTag.appendChild(pText)//this is appended lorem will be stored here
+    //   div.appendChild(pTag)//<div> lorem wala paragraph </div> div k ander lorem wala para aa gaya
+
+
+
+
+     // const listdiv=document.getElementById("para1")
+    //   const ulTag=document.createElement("ul");
+    //   let liTag=document.createElement("li")
+
+    //   const TextNode=document.createTextNode("One")
+    //   const TextNode1=document.createTextNode("Two") 
+    //   const TextNode2=document.createTextNode("Three")
+      
+    //   liTag.appendChild(TextNode)
+    //   ulTag.appendChild(liTag)
+
+    //   liTag=document.createElement("li")
+    //   liTag.appendChild(TextNode1)
+    //   ulTag.appendChild(liTag)
+
+    //   liTag=document.createElement("li")//<li></li>
+    //   liTag.appendChild(TextNode2)//<li>Three</li>
+    //   ulTag.appendChild(liTag)//<ul><li>One</li><li>Two</li><li>Three</li></ul>
+
+    //   listdiv.appendChild(ulTag)//here it will append
+      const listDiv=document.getElementById("para1")
+      const ulTag=document.createElement("ul")
+      const textNodes=["Nagpur","Pune","Nashik","Mumbai"]
+      const hrefLink="https://getbootstrap.com/docs/5.0/components/navbar/"  
+      
+    //   for(text of textNodes){
+    //     //let textNodes =document.createTextNode(text)
+    //     let aTag=document.createElement("a")
+    //     aTag.href=hrefLink
+    //     let textNodes=document.createTextNode(text)
+    //     aTag.appendChild(textNodes)
+    //     let liTag=document.createElement("li")
+    //     liTag.appendChild(aTag)
+    //     ulTag.appendChild(liTag)
+
+    //   }
+      textNodes.forEach((e,i)=>{
+       
+        let aTag=document.createElement("a")
+        aTag.href=hrefLink
+        let textNodes=document.createTextNode(text)
+        aTag.appendChild(textNodes)
+        let liTag=document.createElement("li")
+        liTag.appendChild(aTag)
+        ulTag.appendChild(liTag)
+      })
+      listDiv.appendChild(ulTag)
+      
+
+      //anchor tag
+      const aTag=document.createElement("a")
+      aTag.href="https://getbootstrap.com/docs/5.0/components/navbar/"  
+      aTag.appendChild(document.createTextNode("Bootstrap "))
+      listDiv.appendChild(aTag)
+      
+      
+      const imgTag=document.createElement("img")
+      imgTag.src="Naruto.jpg"
+      listDiv.appendChild(imgTag)
+     
+
+
+    </script>
+   
+</body>
+</html>

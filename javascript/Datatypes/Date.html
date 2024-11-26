@@ -1,0 +1,118 @@
+
+<div id="clock"></div>
+<button onclick="startClock()">Start</button>
+<button onclick="stopClock()">Stop</button>
+
+<!--<div id="box" class="box"></div>  -->
+
+<!--<style>
+.box{
+    height: 100px;
+    width: 20px;
+    background-color:#16f095 ;
+    display: none;
+    position: absolute;
+    /*top left right bottom*/
+    left: 0px;
+    top: 0px;
+    transition: all 2s;
+}
+</style>-->
+
+<script>
+    /*
+    let intervalId =null
+   
+     function startClock(){
+let clockDiv=document.getElementById("clock")
+intervalId=setInterval(function(){
+let d=new Date()
+clockDiv.innerHTML=`${d.getHours()}:
+${d.getMinutes()}:
+${d.getSeconds()}`
+},1000)
+}
+function stopClock(){
+clearInterval(intervalId)
+}
+*/
+
+
+    /*
+   const box= document.getElementById("box")
+    setTimeout(function(){
+    box.style.display="block"
+   },2000)
+   setTimeout(function(){
+    box.style.backgroundColor="rgb(82, 181, 243)"
+    box.style.width="100%"
+    box.style.left="100px"
+    box.style.top="100%"
+   },4000)
+  */
+    
+    /*
+    Date Methods 
+    console.log(d)
+    
+
+    console.log(d.getDate())
+    console.log(d.getDay())
+    console.log(d.getMonth()+1)  //month starts from 0 here
+    console.log(d.getFullYear())
+
+    console.log(d.getHours())
+    console.log(d.getMinutes())
+    console.log(d.getSeconds())
+    */
+   /*
+    function getDayStr(day){
+        switch(day)
+        {
+            case 0:
+                return "sunday"
+            case 1:
+                return "monday"
+            case 2:
+                return "tuesday"
+            case 3:
+                return "wednesday"
+            case 4:
+                return "thrusday"
+            case 5:
+                return "friday"
+            case 6:
+                return "saturday"
+        }
+    }
+
+   const dob=new Date(2020,10,12,1,30,16)//year,month,date,hour,min,seconds
+   //console.log(dob)
+   const dateStr=`${getDayStr(dob.getDay()).toUpperCase().substr(0,3)} ${dob.getDate()}/${dob.getMonth()}/${dob.getFullYear()}`
+   console.log(dateStr)
+   
+  */
+ const oneSecond=1000
+ const oneMin=oneSecond*60
+ const oneHour=oneMin*60
+ const oneDay=oneHour*24
+ const oneYear=oneDay*365
+
+   let d=new Date()
+   const dob=new Date(2020,10,12,1,30,16)
+   const diffTime=d.getTime()-dob.getTime()
+   console.log((diffTime/oneYear).toFixed(0),"year")
+   console.log(d.toLocaleDateString())
+   console.log(d.toLocaleString("en-US",{day:'2-digit'}))
+   console.log(d.toLocaleString("en-US",{month:'2-digit'}))
+
+
+   
+
+
+   
+
+   
+
+</script>
+

@@ -1,0 +1,108 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&family=Kablammo&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100..700&display=swap');
+
+/* universal selector using * which means all */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.kablammo-heading {
+font-family: "Kablammo", system-ui;
+font-optical-sizing: auto;
+font-weight: 400;
+font-style: normal;
+font-variation-settings:
+"MORF" 0;
+}
+
+
+
+/* Tag selector */
+div.container {
+    width: 100vw;
+    /* vw viewport  100 is 100% complete width of viewport*/
+    height: 100vh;
+    /* vh viewport  100 is 100% complete height of viewport*/
+
+    /*border: black 2px solid;*/
+    /* border-color, border-width, border-style:"solid/dotted/inset/outset/double.. and etc"*/
+
+}
+
+header {
+    height: 10vh;
+    background-color: rgb(4, 4, 4);
+}
+header:hover
+{
+    background-color: rgb(207, 218, 227);
+}
+
+main {
+    background-image: url("image.jpg.img");
+    background-size: contain;
+    height: 70vh;
+    display: flex;
+    justify-content: center; /* Horizantal center*/
+    align-items: center; /* vertical center  will be applied on content*/ 
+
+}
+footer {
+    height: 20vh;
+    background-color: rgb(16, 16, 16);
+}
+.top-heading
+{
+    color: rgb(33, 96, 98);
+  
+}
+.top-para
+{
+    color: rgb(52, 170, 170);
+    background-color: rgb(14, 53, 55);
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    font-family: "Arima", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.heading
+{
+    color: rgb(33, 96, 98);
+    margin-top: 10px;
+}
+.para
+{
+    color: rgb(52, 170, 170);
+    background-color: rgb(14, 53, 55);
+    padding-left: 10px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    margin-top: 10px;
+    font-family: "Arima", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+.main-content
+{
+    background-color: rgb(121, 121, 121);
+    width: 80%;
+    height: 80%;
+    /*box-shadow: 3px 3px 5px black, -3px -3px 5px red;*/
+    box-shadow: 3px 3px 5px black;
+    padding: 20px 30px 10px;
+    /* 10px top-bottom 20px left-right*/
+    border-radius: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.main-content h1
+{
+    color: white;
+}

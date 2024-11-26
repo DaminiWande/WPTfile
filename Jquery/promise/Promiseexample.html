@@ -1,0 +1,40 @@
+<script>
+    function function2(r)
+{
+    console.log("Function 2",r)
+}
+function function1(){
+const p=new Promise((resolve,reject)=>
+{
+    setTimeout(()=>resolve("Success result..."),3000)
+// because of resolve then will be called
+//reject("error result")//because of reject catch will be called
+//use only one at once
+
+})
+console.log(p)
+p.then((result)=>
+{
+console.log("then 1")
+console.log(result)
+return result
+}).then((result)=> {
+function2(result)
+console.log("then 2")
+  
+})
+
+.catch((err)=>
+{
+console.error(err)
+})
+// .finally()
+// {
+// console.warn("Finally Execution....")//we write clean up code in finally
+
+// }
+}
+
+function1()
+function2()
+</script>

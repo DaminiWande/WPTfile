@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <button id="get-data">Get Data</button>
+    <button id="get-id-data">Get ID Data(Get)</button>
+    <button id="set-data">Set Data(Post)</button>
+    <button id="upt-data">Update Data(Put)</button>
+    <button id="p-upt-data">Partial Update Data(Patch)</button>
+    <button id="delete-data">Delete Data(Delete)</button>  
+    <script src="../jquery-3.7.1.min.js">
+    </script>
+    <script>
+        $(document).ready(()=>{
+            $("#get-data").click(async()=>{
+              const response=await axios.get("http://localhost:3000/persons")//get is a async function
+              console.log(response.data)
+              })  
+             
+            $("#get-id-data").click(async()=>{
+              const response=await axios.get("http://localhost:3000/persons/1")//get is a async function
+              console.log(response.data)
+              }) 
+              $("#set-data").click(async()=>{
+              const response=await axios.post("http://localhost:3000/persons", {
+               id:"2",
+               name:"Rahul",
+               age:"26",
+               mobile:"4657687998"
+           })//get is a async function
+              console.log(response.data)
+              })  
+
+              $("#upt-data").click(async()=>{
+              const response=await axios.post("http://localhost:3000/persons/2", {
+               id:"2",
+               name:"Akash",
+               age:"26",
+               mobile:"4657687998"
+           })//get is a async function
+              console.log(response.data)
+              })  
+
+              $("#p-upt-data").click(async()=>{
+              const response=await axios.patch("http://localhost:3000/persons/2", {           
+               age:"26"
+               
+           })//get is a async function
+              console.log(response.data)
+              })  
+              $("#delete-data").click(async()=>{
+              const response=await axios.delete("http://localhost:3000/persons/2")//get is a async function
+              console.log(response.data)
+              })  
+            }) 
+    </script>
+</body>
+</html>
